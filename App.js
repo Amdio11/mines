@@ -5,7 +5,7 @@ import MineField from './src/components/MineField'
 import Header from './src/components/Header'
 import LevelSelection from './src/screens/LevelSelection'
 import {
-  createMinedBoard,
+  createMineBoard,
   cloneBoard,
   openField,
   hadExplosion,
@@ -32,7 +32,7 @@ export default class App extends Component {
     const cols = params.getColumnsAmount()
     const rows = params.getRowsAmount()
     return {
-      board: createMinedBoard(rows, cols, this.minesAmount()),
+      board: createMineBoard(rows, cols, this.minesAmount()),
       won: false,
       lost: false,
       showLevelSelection: false,
